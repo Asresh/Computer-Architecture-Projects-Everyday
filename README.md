@@ -11,3 +11,4 @@ Each day lives in its own folder (`DayN/`) containing a self-contained project w
 | 1 | Single-cycle RISC-V (RV32I) Integer ALU | Combinational ALU, RV32I ops, signed vs. unsigned compare, logical vs. arithmetic shift, zero flag | [Day1](Day1/) |
 | 2 | RV32I Register File (2R / 1W) | Architectural register state, dual combinational read ports, synchronous write, x0 hardwired to zero, internal write-forwarding (WB→ID hazard) | [Day2](Day2/) |
 | 3 | RV32I Instruction Decoder + Immediate Generator | Combinational control decode (opcode/funct3/funct7), datapath control lines, ALU-control mapping, I/S/B/U/J immediate generation, safe NOP default | [Day3](Day3/) |
+| 4 | RV32I Load/Store Unit + Data Memory | Byte-addressable little-endian memory, lb/lh/lw/lbu/lhu/sb/sh/sw, byte-lane selection, sign vs. zero extension, per-byte write enables, within-word misalignment policy | [Day4](Day4/) |
