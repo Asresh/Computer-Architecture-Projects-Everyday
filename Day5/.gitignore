@@ -1,0 +1,12 @@
+# Simulation build artifacts
+simv_icarus
+simv_vcs
+simv_verilator
+obj_dir/
+work/
+transcript
+vsim.wlf
+csrc/
+*.daidir/
+ucli.key
+*.vcd
