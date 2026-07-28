@@ -8,3 +8,4 @@ Each day lives in its own folder (`DayN/`) containing a self-contained project w
 
 | Day | Project | Key concepts | Folder |
 |-----|---------|--------------|--------|
+| 1 | Single-cycle RISC-V (RV32I) Integer ALU | Combinational ALU, RV32I ops, signed vs. unsigned compare, logical vs. arithmetic shift, zero flag | [Day1](Day1/) |
