@@ -12,7 +12,7 @@ place in the machine that can exploit that, and it does so by **reordering**.
 
 | Day | Structure | What it manages |
 |-----|-----------|-----------------|
-| [Day 7](../day7-direct_mapped_cache/) / [Day 23](../day23-set_associative_cache/) | data cache | *locality* — keep the hot line close |
+| [Day 7](../day07-direct_mapped_cache/) / [Day 23](../day23-set_associative_cache/) | data cache | *locality* — keep the hot line close |
 | [Day 27](../day27-stride_prefetcher/) | stride prefetcher | *anticipation* — start the miss early |
 | [Day 30](../day30-mesi_cache_coherence/) | MESI controller | *permission* — who may read or write |
 | [Day 31](../day31-mshr_file/) | MSHR file | *concurrency* — how many misses may be in flight |

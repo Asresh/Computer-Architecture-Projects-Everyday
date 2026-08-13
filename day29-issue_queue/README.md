@@ -278,7 +278,7 @@ Reading the trace:
   entry is completely rewritten (row cleared, column set) the moment that entry
   is re-allocated.
 * The allocator isolates the lowest free slot with `free & (~free + 1)` — the
-  same trick as the [Day 9](../day9-round_robin_arbiter/) round-robin arbiter, here used for
+  same trick as the [Day 9](../day09-round_robin_arbiter/) round-robin arbiter, here used for
   placement rather than fairness (fairness is the age matrix's job).
 * Everything is reset-safe (empty queue, cleared matrix) and lint-clean under
   `iverilog -g2012 -Wall`.
