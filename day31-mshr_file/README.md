@@ -11,9 +11,9 @@ running while memory is 200+ cycles away.
 
 | Day | Cache | What it manages |
 |-----|-------|-----------------|
-| [Day 7](../Day7/) | direct-mapped write-back | locality — one client, one copy |
-| [Day 23](../Day23/) | N-way + tree-PLRU | *placement* — which of WAYS copies to evict |
-| [Day 30](../Day30/) | direct-mapped + MESI snooping | *permission* — who may read or write a line |
+| [Day 7](../day7-direct_mapped_cache/) | direct-mapped write-back | locality — one client, one copy |
+| [Day 23](../day23-set_associative_cache/) | N-way + tree-PLRU | *placement* — which of WAYS copies to evict |
+| [Day 30](../day30-mesi_cache_coherence/) | direct-mapped + MESI snooping | *permission* — who may read or write a line |
 | **Day 31 (this)** | **MSHR file** | ***concurrency* — how many misses may be in flight, and who is waiting on each** |
 
 ---
@@ -39,9 +39,9 @@ A lockup-free cache overlaps them. It costs roughly `L`:
 
 That overlap is **memory-level parallelism (MLP)**, and it is the dominant term
 in the memory performance of every modern core. Everything upstream in this
-series exists to *create* independent misses — [Day 28](../Day28/) renaming
-removes false dependences, [Day 29](../Day29/) issue lets independent loads
-launch out of order, [Day 27](../Day27/) prefetching manufactures misses
+series exists to *create* independent misses — [Day 28](../day28-register_renaming_unit/) renaming
+removes false dependences, [Day 29](../day29-issue_queue/) issue lets independent loads
+launch out of order, [Day 27](../day27-stride_prefetcher/) prefetching manufactures misses
 early — and all of it is worthless if the cache can only have one miss
 outstanding. The MSHR file is where that parallelism is actually *cashed in*.
 

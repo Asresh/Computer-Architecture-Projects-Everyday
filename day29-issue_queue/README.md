@@ -8,9 +8,9 @@ This is the missing middle of the out-of-order trio already in this series:
 
 | Stage | Day | What it provides |
 |-------|-----|------------------|
-| Rename | [Day 28](../Day28/) | removes false WAR/WAW dependences → only true RAW remains |
+| Rename | [Day 28](../day28-register_renaming_unit/) | removes false WAR/WAW dependences → only true RAW remains |
 | **Schedule** | **Day 29 (this)** | **decides *when* each instruction runs, from its RAW readiness alone** |
-| Retire | [Day 12](../Day12/) | puts results back in order → precise architectural state |
+| Retire | [Day 12](../day12-reorder_buffer/) | puts results back in order → precise architectural state |
 
 Renaming makes reordering *legal*; the reorder buffer makes it *safe*; the issue
 queue is what actually makes it *happen*.
@@ -19,7 +19,7 @@ queue is what actually makes it *happen*.
 
 ## Why the issue queue matters
 
-An in-order pipeline (like the [Day 25](../Day25/) 5-stage core) stalls the whole
+An in-order pipeline (like the [Day 25](../day25-pipelined_rv32i_core/) 5-stage core) stalls the whole
 machine on the first instruction that isn't ready — a single L2 miss can idle
 hundreds of instructions that had nothing to do with it. The issue queue breaks
 that coupling. Dispatched instructions sit in a pool of reservation stations,
@@ -278,7 +278,7 @@ Reading the trace:
   entry is completely rewritten (row cleared, column set) the moment that entry
   is re-allocated.
 * The allocator isolates the lowest free slot with `free & (~free + 1)` — the
-  same trick as the [Day 9](../Day9/) round-robin arbiter, here used for
+  same trick as the [Day 9](../day9-round_robin_arbiter/) round-robin arbiter, here used for
   placement rather than fairness (fairness is the age matrix's job).
 * Everything is reset-safe (empty queue, cleared matrix) and lint-clean under
   `iverilog -g2012 -Wall`.

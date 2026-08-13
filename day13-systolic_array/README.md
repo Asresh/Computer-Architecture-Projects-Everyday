@@ -26,7 +26,7 @@ multiplies them and folds the product into its accumulator. After the array
 drains, each PE holds one complete dot product and `C = A × B` is done.
 
 It is a natural spatial-compute companion to the earlier arithmetic and
-scheduling blocks in this series — e.g. the sequential [Booth multiplier](../Day8/)
+scheduling blocks in this series — e.g. the sequential [Booth multiplier](../day8-booth_multiplier/)
 (Day 8), which computes a *single* product in time, where this array computes an
 entire *matrix* of products in space.
 

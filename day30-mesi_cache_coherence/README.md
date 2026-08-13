@@ -13,8 +13,8 @@ the hardware that implements it.
 
 | Day | Cache | What it manages |
 |-----|-------|-----------------|
-| [Day 7](../Day7/) | direct-mapped write-back | locality — one client, one copy |
-| [Day 23](../Day23/) | N-way + tree-PLRU | *placement* — which of WAYS copies to evict |
+| [Day 7](../day7-direct_mapped_cache/) | direct-mapped write-back | locality — one client, one copy |
+| [Day 23](../day23-set_associative_cache/) | N-way + tree-PLRU | *placement* — which of WAYS copies to evict |
 | **Day 30 (this)** | **direct-mapped + MESI snooping** | ***permission* — who is allowed to read or write a line, and when** |
 
 ---
@@ -108,7 +108,7 @@ waveform below.
 - Reset-safe, lint-friendly, no data-dependent variable bit-selects.
 
 Block size is **one word**, so the protocol rather than the burst plumbing is the
-subject; [Day 7](../Day7/) and [Day 23](../Day23/) already cover multi-word line
+subject; [Day 7](../day7-direct_mapped_cache/) and [Day 23](../day23-set_associative_cache/) already cover multi-word line
 fills and the two concerns are orthogonal.
 
 ---

@@ -50,7 +50,7 @@ simply recurse on the same stack.
   guarantees reconvergence at the *earliest* legal point, maximizing how quickly
   lanes rejoin — a real design tension in GPU front-ends (PDOM vs. thread
   frontiers vs. modern per-thread PC / independent thread scheduling on Volta+).
-- **Companion to the array.** [Day 13](../Day13/) built the systolic MAC grid
+- **Companion to the array.** [Day 13](../day13-systolic_array/) built the systolic MAC grid
   (the datapath a Tensor Core streams through); this is the **control** side of
   the same machine — how the front-end keeps a warp coherent across branches
   before it ever reaches the math units.
