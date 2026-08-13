@@ -6,7 +6,7 @@ stream naming a larger pool of *physical* registers, so that the false
 (name-based) dependences disappear and an out-of-order scheduler can run true
 dependences as early as their operands are ready.
 
-This is the natural partner to the [Day 12](../Day12/) Reorder Buffer: the ROB
+This is the natural partner to the [Day 12](../day12-reorder_buffer/) Reorder Buffer: the ROB
 gives **in-order retire / precise state**, and renaming gives the **dependency
 freedom** the ROB's out-of-order completion relies on.
 

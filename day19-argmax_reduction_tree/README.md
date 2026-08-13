@@ -35,7 +35,7 @@ This is the exact primitive behind:
 ### Why it matters (the architectural concept)
 
 A reduction is one of the two canonical data-parallel primitives (the other,
-scan, is [Day 18](../Day18/)). Both are `O(N)`-work / `O(log N)`-depth trees;
+scan, is [Day 18](../day18-prefix_scan_unit/)). Both are `O(N)`-work / `O(log N)`-depth trees;
 the difference is that a reduction keeps only the root while a scan keeps every
 prefix. Building the reduction as a **balanced, registered tree** turns a
 naïve `O(N)` linear compare chain (whose critical path grows with `N`) into a

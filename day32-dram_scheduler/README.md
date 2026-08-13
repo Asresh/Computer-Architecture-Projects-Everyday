@@ -3,7 +3,7 @@
 A synthesizable **memory-controller scheduler** — the block that decides, cycle
 by cycle, which DRAM command to put on the command bus.
 
-[Day 31](../Day31/) removed the last reason a core has to stop at a cache miss,
+[Day 31](../day31-mshr_file/) removed the last reason a core has to stop at a cache miss,
 so misses now leave the chip in parallel. This is what they arrive at. Below
 the last-level cache there is no more "one access, one latency": DRAM is a
 **stateful** device whose cost per access varies by a factor of three depending
@@ -12,10 +12,10 @@ place in the machine that can exploit that, and it does so by **reordering**.
 
 | Day | Structure | What it manages |
 |-----|-----------|-----------------|
-| [Day 7](../Day7/) / [Day 23](../Day23/) | data cache | *locality* — keep the hot line close |
-| [Day 27](../Day27/) | stride prefetcher | *anticipation* — start the miss early |
-| [Day 30](../Day30/) | MESI controller | *permission* — who may read or write |
-| [Day 31](../Day31/) | MSHR file | *concurrency* — how many misses may be in flight |
+| [Day 7](../day7-direct_mapped_cache/) / [Day 23](../day23-set_associative_cache/) | data cache | *locality* — keep the hot line close |
+| [Day 27](../day27-stride_prefetcher/) | stride prefetcher | *anticipation* — start the miss early |
+| [Day 30](../day30-mesi_cache_coherence/) | MESI controller | *permission* — who may read or write |
+| [Day 31](../day31-mshr_file/) | MSHR file | *concurrency* — how many misses may be in flight |
 | **Day 32 (this)** | **FR-FCFS scheduler** | ***order* — which of the outstanding requests DRAM should serve next** |
 
 ---
@@ -64,7 +64,7 @@ be activated, and a third bank can be precharged. Only two resources are shared:
   though the *bank* was ready sooner.
 
 Overlapping the per-bank dead time is exactly what makes the memory-level
-parallelism of [Day 31](../Day31/) pay off.
+parallelism of [Day 31](../day31-mshr_file/) pay off.
 
 ### Why FR-FCFS needs a fairness fix
 
@@ -246,7 +246,7 @@ younger than D). What the window shows:
 **The queue is the age order.** Entry 0 is always the oldest request. A
 departure collapses the array down one slot and arrivals append at the tail, so
 "oldest ready candidate" is just a lowest-set-bit priority encode over a
-bit-vector — no sequence numbers, no age matrix ([Day 29](../Day29/) needed one
+bit-vector — no sequence numbers, no age matrix ([Day 29](../day29-issue_queue/) needed one
 because its entries could not move).
 
 **Per cycle, three predicate vectors are computed in parallel** for all

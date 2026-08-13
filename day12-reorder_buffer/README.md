@@ -23,7 +23,7 @@ in its slot until every older instruction ahead of it has retired.
 
 This is the first project in the series to model **out-of-order execution**; it
 builds naturally on the in-order pieces from Days 1–5 and the
-[Store Buffer](../Day11/) (Day 11), which similarly decouples completion from a
+[Store Buffer](../day11-store_buffer/) (Day 11), which similarly decouples completion from a
 program-ordered drain.
 
 ## Why it matters
