@@ -40,3 +40,4 @@ Each day lives in its own folder containing a self-contained project with source
 | 30 | MESI Snooping Cache-Coherence Controller | A per-core write-back cache implementing the four-state MESI snooping coherence protocol across a shared bus. | [day30-mesi_cache_coherence](day30-mesi_cache_coherence/) |
 | 31 | Non-Blocking (Lockup-Free) Cache MSHR File | A Miss Status Holding Register file that turns a blocking cache into a lockup-free one, enabling memory-level parallelism. | [day31-mshr_file](day31-mshr_file/) |
 | 32 | FR-FCFS DRAM Memory-Access Scheduler | A memory-controller scheduler implementing first-ready/first-come-first-served DRAM command ordering with a fairness bypass cap. | [day32-dram_scheduler](day32-dram_scheduler/) |
+| 33 | Out-of-Order Load/Store Queue | A speculative memory-disambiguation engine with youngest-store forwarding, memory-order violation detection, and pointer-checkpoint recovery. | [day33-load_store_queue](day33-load_store_queue/) |
