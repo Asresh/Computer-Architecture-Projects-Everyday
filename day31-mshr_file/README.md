@@ -11,7 +11,7 @@ running while memory is 200+ cycles away.
 
 | Day | Cache | What it manages |
 |-----|-------|-----------------|
-| [Day 7](../day7-direct_mapped_cache/) | direct-mapped write-back | locality — one client, one copy |
+| [Day 7](../day07-direct_mapped_cache/) | direct-mapped write-back | locality — one client, one copy |
 | [Day 23](../day23-set_associative_cache/) | N-way + tree-PLRU | *placement* — which of WAYS copies to evict |
 | [Day 30](../day30-mesi_cache_coherence/) | direct-mapped + MESI snooping | *permission* — who may read or write a line |
 | **Day 31 (this)** | **MSHR file** | ***concurrency* — how many misses may be in flight, and who is waiting on each** |
