@@ -1,3 +1,4 @@
+<!-- Author: Asresh Kuricheti -->
 # Computer Architecture Projects — Everyday
 
 A daily series of self-contained computer-architecture projects in SystemVerilog. One documented, simulate-able architecture design per day.
@@ -42,3 +43,4 @@ Each day lives in its own folder containing a self-contained project with source
 | 32 | FR-FCFS DRAM Memory-Access Scheduler | A memory-controller scheduler implementing first-ready/first-come-first-served DRAM command ordering with a fairness bypass cap. | [day32-dram_scheduler](day32-dram_scheduler/) |
 | 33 | Out-of-Order Load/Store Queue | A speculative memory-disambiguation engine with youngest-store forwarding, memory-order violation detection, and pointer-checkpoint recovery. | [day33-load_store_queue](day33-load_store_queue/) |
 | 34 | Parameterized SECDED ECC Pipeline | An extended-Hamming encoder/decoder that corrects single-bit faults, detects double-bit faults, and protects cache, DRAM, and interconnect data. | [day34-secded_ecc](day34-secded_ecc/) |
+| 35 | Five-Port Wormhole Network-on-Chip Router | A mesh NoC router combining elastic input FIFOs, deterministic XY routing, ready/valid backpressure, and fair per-output round-robin arbitration. | [day35-noc_router](day35-noc_router/) |
